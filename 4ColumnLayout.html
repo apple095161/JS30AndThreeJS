@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>方塊酥版面</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&display=swap');
+
+        * {
+            font-family: Noto Sans TC;
+        }
+
+        .wrap {
+            max-width: 300;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .item {
+            float: left;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        .item img {
+            width: 100%;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        .item:first-child {
+            width: 50%;
+        }
+
+        .item:first-child~.item {
+            width: 25%;
+        }
+
+        .item .txt {
+            content: '';
+            position: absolute;
+            background: rgba(0, 0, 0, .3);
+            left: 0;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+            width: 100%;
+            padding: 15px;
+            box-sizing: border-box;
+            opacity: 0;
+            transform: scale(0);
+            transition: .3s;
+        }
+
+        .item:hover .txt {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+
+        .txt h3 {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .txt p {
+            font-weight: 100;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <div class="item">
+            <img src="https://picsum.photos/500/250?random=10" alt="">
+            <div class="txt">
+                <h3>標題</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, accusantium?</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/500/250?random=20" alt="">
+            <div class="txt">
+                <h3>標題</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, accusantium?</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/500/250?random=30" alt="">
+            <div class="txt">
+                <h3>標題</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, accusantium?</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/500/250?random=40" alt="">
+            <div class="txt">
+                <h3>標題</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, accusantium?</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/500/250?random=50" alt="">
+            <div class="txt">
+                <h3>標題</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, accusantium?</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
